@@ -60,13 +60,14 @@ module.exports = function(router) {
         }else{
 
 
-
+          //https://fast-wave-78621.herokuapp.com/
+          //http://localhost:8080
             var email = {
               from: 'chetan@laundrywala.co.in',
               to: user.email,
               subject: 'Localhost Activation Link',
-              text: 'Hello' + user.name + ',Thank you for registering at localhost.com. Please click on the link to complete activation:http://localhost:8080/activate/'+ user.temporarytoken,
-              html: 'Hello<strong>' + user.name + '</strong>,<br><br>Thank you for registering at localhost.com. Please click on the link below to complete activation:<br><br><a href="http://localhost:8080/activate/'+ user.temporarytoken +'">http://localhost:8080/activate/</a>'
+              text: 'Hello' + user.name + ',Thank you for registering at localhost.com. Please click on the link to complete activation:https://fast-wave-78621.herokuapp.com/activate/'+ user.temporarytoken,
+              html: 'Hello<strong>' + user.name + '</strong>,<br><br>Thank you for registering at localhost.com. Please click on the link below to complete activation:<br><br><a href="https://fast-wave-78621.herokuapp.com/activate/'+ user.temporarytoken +'">https://fast-wave-78621.herokuapp.com/activate/</a>'
             };
 
             client.sendMail(email, function(err, info){
@@ -224,13 +225,14 @@ module.exports = function(router) {
         if(err){
           console.log(err);
         }else{
-
+          //https://fast-wave-78621.herokuapp.com/
+          //http://localhost:8080
           var email = {
             from: 'chetan@laundrywala.co.in',
             to: user.email,
             subject: 'Localhost Activation Link Request',
-            text: 'Hello' + user.name + ',You recently requested a new account activation link.Please click on the link to complete activation:http://localhost:8080/activate/'+ user.temporarytoken,
-            html: 'Hello<strong>' + user.name + '</strong>,<br><br>You recently requested a new account activation link Please click on the link below to complete activation:<br><br><a href="http://localhost:8080/activate/'+ user.temporarytoken +'">http://localhost:8080/activate/</a>'
+            text: 'Hello' + user.name + ',You recently requested a new account activation link.Please click on the link to complete activation:https://fast-wave-78621.herokuapp.com/activate/'+ user.temporarytoken,
+            html: 'Hello<strong>' + user.name + '</strong>,<br><br>You recently requested a new account activation link Please click on the link below to complete activation:<br><br><a href="https://fast-wave-78621.herokuapp.com/activate/'+ user.temporarytoken +'">https://fast-wave-78621.herokuapp.com/activate/</a>'
           };
 
           client.sendMail(email, function(err, info){
@@ -296,13 +298,14 @@ module.exports = function(router) {
           if(err){
             res.json({success:false, message:err});
           }else{
-
+            //https://fast-wave-78621.herokuapp.com/
+            //http://localhost:8080
             var email = {
               from: 'chetan@laundrywala.co.in',
               to: user.email,
               subject: 'Localhost Activation Link Request',
-              text: 'Hello' + user.name + ',You recently requested a password reset link.Please click on the link below to reset:http://localhost:8080/reset/'+ user.resettoken,
-              html: 'Hello<strong>' + user.name + '</strong>,<br><br>You recently requested a password reset link Please click on the link below to reset:<br><br><a href="http://localhost:8080/reset/'+ user.resettoken +'">http://localhost:8080/reset/</a>'
+              text: 'Hello' + user.name + ',You recently requested a password reset link.Please click on the link below to reset:https://fast-wave-78621.herokuapp.com/reset/'+ user.resettoken,
+              html: 'Hello<strong>' + user.name + '</strong>,<br><br>You recently requested a password reset link Please click on the link below to reset:<br><br><a href="https://fast-wave-78621.herokuapp.com/reset/'+ user.resettoken +'">https://fast-wave-78621.herokuapp.com/reset/</a>'
             };
             client.sendMail(email, function(err, info){
                 if (err ){
